@@ -15,3 +15,5 @@ import csv
 def read_csv(path):
     with open(path, "r") as file:
         return list(csv.DictReader(file))
+
+    
