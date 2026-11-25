@@ -1,0 +1,3 @@
+row_number,order_id,customer_id,order_status,reason
+2,,C02,shipped,Empty value: order_id
+3,A03,,,Empty value: customer_id; Empty value: order_status
