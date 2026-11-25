@@ -1,0 +1,11 @@
+2026-11-25 10:38:06,263 | INFO | Starting ETL run 20261125T050806Z
+2026-11-25 10:38:06,978 | INFO | customers | total=99441 valid=99441 rejected=0 rejection=0.00%
+2026-11-25 10:38:07,194 | INFO | products | total=32951 valid=32951 rejected=0 rejection=0.00%
+2026-11-25 10:38:13,681 | INFO | geolocation | total=1000163 valid=1000163 rejected=0 rejection=0.00%
+2026-11-25 10:38:13,763 | INFO | sellers | total=3095 valid=3095 rejected=0 rejection=0.00%
+2026-11-25 10:38:15,124 | INFO | order_items | total=112650 valid=112650 rejected=0 rejection=0.00%
+2026-11-25 10:38:15,897 | INFO | order_payments | total=103886 valid=103886 rejected=0 rejection=0.00%
+2026-11-25 10:38:15,912 | INFO | product_category_translation | total=71 valid=71 rejected=0 rejection=0.00%
+2026-11-25 10:38:17,091 | INFO | order_reviews | total=99224 valid=99224 rejected=0 rejection=0.00%
+2026-11-25 10:38:18,227 | INFO | orders | total=99441 valid=99441 rejected=0 rejection=0.00%
+2026-11-25 10:38:18,251 | INFO | Finished run: processed=9 skipped=0 failed=0 duration=11.997s

@@ -1,0 +1,155 @@
+# The screenshot shows the CSV files in the parent "sample" folder,
+# while this project folder is sample/day14_olist_sample_style.
+# Therefore ".." points to the folder containing the Olist CSV files.
+input_dir: ".."
+
+# Generated files stay inside day14_olist_sample_style.
+output_dir: "output"
+log_dir: "logs"
+summary_dir: "output/summaries"
+manifest_path: "output/manifest.json"
+
+# A dataset fails if its rejected-row percentage is greater than this value.
+max_rejection_percent: 20.0
+
+datasets:
+  customers:
+    file: "olist_customers_dataset.csv"
+    required_columns:
+      - customer_id
+      - customer_unique_id
+      - customer_zip_code_prefix
+      - customer_city
+      - customer_state
+    id_columns:
+      - customer_id
+      - customer_unique_id
+    zip_columns:
+      - customer_zip_code_prefix
+    column_mapping: {}
+
+  products:
+    file: "olist_products_dataset.csv"
+    # Product category and dimensions can contain missing values in Olist,
+    # so only product_id is treated as mandatory here.
+    required_columns:
+      - product_id
+    id_columns:
+      - product_id
+    column_mapping: {}
+
+  geolocation:
+    file: "olist_geolocation_dataset.csv"
+    required_columns:
+      - geolocation_zip_code_prefix
+      - geolocation_lat
+      - geolocation_lng
+      - geolocation_city
+      - geolocation_state
+    zip_columns:
+      - geolocation_zip_code_prefix
+    numeric_columns:
+      - geolocation_lat
+      - geolocation_lng
+    column_mapping: {}
+
+  sellers:
+    file: "olist_sellers_dataset.csv"
+    required_columns:
+      - seller_id
+      - seller_zip_code_prefix
+      - seller_city
+      - seller_state
+    id_columns:
+      - seller_id
+    zip_columns:
+      - seller_zip_code_prefix
+    column_mapping: {}
+
+  order_items:
+    file: "olist_order_items_dataset.csv"
+    required_columns:
+      - order_id
+      - order_item_id
+      - product_id
+      - seller_id
+      - price
+      - freight_value
+      - shipping_limit_date
+    id_columns:
+      - order_id
+      - product_id
+      - seller_id
+    numeric_columns:
+      - order_item_id
+      - price
+      - freight_value
+    positive_columns:
+      - price
+    date_columns:
+      - shipping_limit_date
+    column_mapping: {}
+
+  order_payments:
+    file: "olist_order_payments_dataset.csv"
+    required_columns:
+      - order_id
+      - payment_sequential
+      - payment_type
+      - payment_installments
+      - payment_value
+    id_columns:
+      - order_id
+    numeric_columns:
+      - payment_sequential
+      - payment_installments
+      - payment_value
+    column_mapping: {}
+
+  product_category_translation:
+    file: "product_category_name_translation.csv"
+    required_columns:
+      - product_category_name
+      - product_category_name_english
+    column_mapping: {}
+
+  order_reviews:
+    file: "olist_order_reviews_dataset.csv"
+    required_columns:
+      - review_id
+      - order_id
+      - review_score
+      - review_creation_date
+    id_columns:
+      - review_id
+      - order_id
+    numeric_columns:
+      - review_score
+    date_columns:
+      - review_creation_date
+    # review_comment_title, review_comment_message and
+    # review_answer_timestamp may be missing, so they are not required.
+    column_mapping: {}
+
+  orders:
+    file: "olist_orders_dataset.csv"
+    required_columns:
+      - order_id
+      - customer_id
+      - order_status
+      - order_purchase_timestamp
+    id_columns:
+      - order_id
+      - customer_id
+    date_columns:
+      - order_purchase_timestamp
+    allowed_statuses:
+      - created
+      - approved
+      - invoiced
+      - processing
+      - shipped
+      - delivered
+      - unavailable
+      - canceled
+    column_mapping: {}

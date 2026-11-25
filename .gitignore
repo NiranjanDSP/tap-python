@@ -12,3 +12,4 @@ __pycache__/
 .pytest_cache
 customers.csv
 orders.csv
+day14_olist_sample_style/output

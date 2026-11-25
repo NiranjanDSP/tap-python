@@ -1,0 +1,21 @@
+{
+  "run_id": "20261125T052855Z",
+  "duration_seconds": 0.2,
+  "processed_count": 0,
+  "skipped_count": 9,
+  "failed_count": 0,
+  "processed": [],
+  "skipped": [
+    "customers",
+    "products",
+    "geolocation",
+    "sellers",
+    "order_items",
+    "order_payments",
+    "product_category_translation",
+    "order_reviews",
+    "orders"
+  ],
+  "failed": [],
+  "log_file": "logs\\etl_run_20261125_105855_877333.log"
+}

@@ -1,0 +1,11 @@
+2026-11-25 10:52:43,461 | INFO | Starting ETL run 20261125T052243Z
+2026-11-25 10:52:43,481 | INFO | Skipping unchanged file: customers
+2026-11-25 10:52:43,487 | INFO | Skipping unchanged file: products
+2026-11-25 10:52:43,564 | INFO | Skipping unchanged file: geolocation
+2026-11-25 10:52:43,566 | INFO | Skipping unchanged file: sellers
+2026-11-25 10:52:43,589 | INFO | Skipping unchanged file: order_items
+2026-11-25 10:52:43,600 | INFO | Skipping unchanged file: order_payments
+2026-11-25 10:52:43,602 | INFO | Skipping unchanged file: product_category_translation
+2026-11-25 10:52:43,622 | INFO | Skipping unchanged file: order_reviews
+2026-11-25 10:52:43,647 | INFO | Skipping unchanged file: orders
+2026-11-25 10:52:43,649 | INFO | Finished run: processed=0 skipped=9 failed=0 duration=0.200s

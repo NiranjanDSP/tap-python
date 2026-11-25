@@ -1,0 +1,8 @@
+{
+    "run_timestamp": "2026-11-25T10:37:17",
+    "dataset": "orders",
+    "total_rows": 99441,
+    "valid_rows": 99441,
+    "rejected_rows": 0,
+    "duration_seconds": 248.257
+}
